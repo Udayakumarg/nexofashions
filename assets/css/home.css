@@ -50,6 +50,21 @@
 
 .hero-content {
     max-width: 850px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes heroFadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-tag {
