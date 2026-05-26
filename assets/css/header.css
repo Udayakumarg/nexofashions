@@ -45,22 +45,23 @@
     transition: opacity var(--transition-fast);
 }
 
-/* Hide logo types based on scrolling and theme state */
-.site-header:not(.scrolled) .logo-dark {
+/* By default, hide logo_dark, show logo_light (since header background is dark by default) */
+.logo-dark {
     display: none !important;
 }
-.site-header:not(.scrolled) .logo-light {
+.logo-light {
     display: block !important;
 }
 
+/* Scrolled state: background remains dark charcoal, so display logo_light */
 .site-header.scrolled .logo-dark {
-    display: block !important;
+    display: none !important;
 }
 .site-header.scrolled .logo-light {
-    display: none !important;
+    display: block !important;
 }
 
-/* Subpages initialized in light-theme (not scrolled) */
+/* ONLY when the header has .light-theme and is NOT scrolled (white background fallback), display logo_dark */
 .site-header.light-theme:not(.scrolled) .logo-dark {
     display: block !important;
 }
