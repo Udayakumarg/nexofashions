@@ -184,7 +184,7 @@ img {
 /* Luxury Gold CTA */
 .btn-gold {
     background-color: var(--color-luxury-gold);
-    color: var(--color-primary-dark);
+    color: var(--color-bg-white); /* White text for perfect contrast on deep navy */
     border: 1px solid var(--color-luxury-gold);
 }
 
@@ -192,7 +192,7 @@ img {
     background-color: var(--color-luxury-gold-hover);
     border-color: var(--color-luxury-gold-hover);
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15);
+    box-shadow: 0 10px 20px rgba(15, 30, 54, 0.15); /* Updated drop shadow color */
 }
 
 /* Secondary Outline CTA (Gold) */
@@ -204,9 +204,9 @@ img {
 
 .btn-secondary:hover {
     background-color: var(--color-luxury-gold);
-    color: var(--color-primary-dark);
+    color: var(--color-bg-white); /* Changed to white on hover for high-contrast */
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1);
+    box-shadow: 0 10px 20px rgba(15, 30, 54, 0.1);
 }
 
 /* Dark version of secondary button (for light text sections) */
