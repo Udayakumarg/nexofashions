@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    padding-top: 80px; /* Offset for solid white fixed header */
 }
 
 /* Background Image Overlay with Cinematic Dark Mask */
