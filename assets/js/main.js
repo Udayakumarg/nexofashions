@@ -104,4 +104,42 @@ document.addEventListener('DOMContentLoaded', () => {
             element.classList.add('active');
         });
     }
+
+    // --- 5. 3D Parallax "Dancing Cards" Hover Engine ---
+    const tiltCards = document.querySelectorAll('.tilt-card, .service-card, .industry-card, .case-card, .cert-card');
+    
+    // Only apply on non-touch devices to ensure perfect mobile scrolling
+    if (window.matchMedia('(hover: hover)').matches) {
+        tiltCards.forEach(card => {
+            // Setup card properties for 3D render depth
+            card.style.transformStyle = 'preserve-3d';
+            
+            card.addEventListener('mouseenter', () => {
+                // Short transition for ultra-responsive mouse following
+                card.style.transition = 'transform 0.1s ease-out, box-shadow 0.15s ease-out';
+            });
+            
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                // Tilt rotation math (max 7 degrees for elegant premium luxury touch)
+                const rotateX = ((centerY - y) / centerY) * 7;
+                const rotateY = ((x - centerX) / centerX) * 7;
+                
+                // Apply hardware-accelerated 3D transforms
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02) translateY(-6px)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                // Restore beautiful slow luxury transition for smooth recovery
+                card.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+                card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1) translateY(0)';
+            });
+        });
+    }
 });

@@ -15,13 +15,13 @@
     padding: var(--space-md) 0;
 }
 
-/* Header scrolled state (Frosted Glassmorphism) */
+/* Header scrolled state (Frosted Glassmorphism - Premium White Theme) */
 .site-header.scrolled {
-    background-color: rgba(17, 24, 39, 0.9); /* Translucent Primary Dark */
+    background-color: rgba(255, 255, 255, 0.88); /* Translucent Premium White */
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     padding: 0.85rem 0;
 }
 
@@ -59,12 +59,12 @@
     display: block !important;
 }
 
-/* Scrolled state: background remains dark charcoal, so display logo_light */
+/* Scrolled state: background becomes light, so display logo_dark */
 .site-header.scrolled .logo-dark {
-    display: none !important;
+    display: block !important;
 }
 .site-header.scrolled .logo-light {
-    display: block !important;
+    display: none !important;
 }
 
 /* ONLY when the header has .light-theme and is NOT scrolled (white background fallback), display logo_dark */
@@ -144,17 +144,33 @@
     font-weight: 600;
 }
 
-/* High contrast hover & active state overrides for transparent/scrolled dark headers */
+/* High contrast hover & active state overrides for transparent dark headers */
 .site-header:not(.light-theme) .nav-link:hover,
-.site-header:not(.light-theme) .nav-item.active .nav-link,
-.site-header.scrolled .nav-link:hover,
-.site-header.scrolled .nav-item.active .nav-link {
+.site-header:not(.light-theme) .nav-item.active .nav-link {
     color: #FFFFFF !important;
 }
 
-.site-header:not(.light-theme) .nav-link::after,
-.site-header.scrolled .nav-link::after {
+.site-header:not(.light-theme) .nav-link::after {
     background-color: #FFFFFF !important;
+}
+
+/* Scrolled state navigation links overrides (Dark slate links on light frosted glass) */
+.site-header.scrolled .nav-link {
+    color: var(--color-text-primary) !important;
+}
+
+.site-header.scrolled .nav-link:hover,
+.site-header.scrolled .nav-item.active .nav-link {
+    color: var(--color-primary-dark) !important;
+}
+
+.site-header.scrolled .nav-link::after {
+    background-color: var(--color-premium-teal) !important;
+}
+
+/* Hamburger spans in scrolled state */
+.site-header.scrolled .mobile-trigger span {
+    background-color: var(--color-primary-dark) !important;
 }
 
 /* Header CTAs */
