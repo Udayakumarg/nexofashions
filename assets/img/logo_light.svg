@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48" fill="none">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Manrope:wght@800&amp;display=swap');
+        .wordmark-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 21px;
+            font-weight: 700;
+            fill: #FFFFFF;
+            letter-spacing: 0.08em;
+        }
+        .wordmark-subtitle {
+            font-family: 'Manrope', sans-serif;
+            font-size: 7.5px;
+            font-weight: 800;
+            fill: #E2E8F0;
+            letter-spacing: 0.38em;
+        }
+    </style>
+    <!-- Embedded Monogram scaled down inside 36x36 at x=4, y=6 -->
+    <g transform="translate(4, 6) scale(0.36)">
+        <circle cx="50" cy="50" r="46" stroke="#FFFFFF" stroke-width="2.5" opacity="0.3"/>
+        <path d="M32 28 V72" stroke="#FFFFFF" stroke-width="6" stroke-linecap="square"/>
+        <path d="M26 28 H38" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+        <path d="M26 72 H38" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+        <path d="M32 28 L56 72" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="square"/>
+        <path d="M56 28 V72" stroke="#FFFFFF" stroke-width="6" stroke-linecap="square"/>
+        <path d="M50 72 H62" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+        <path d="M56 28 H72" stroke="#FFFFFF" stroke-width="6" stroke-linecap="square"/>
+        <path d="M72 28 V34" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+        <path d="M56 46 H68" stroke="#FFFFFF" stroke-width="5" stroke-linecap="square"/>
+        <path d="M68 46 V50" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Delicate separating vertical rule -->
+    <line x1="52" y1="12" x2="52" y2="36" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.5"/>
+    
+    <!-- Text Elements -->
+    <text x="64" y="24" class="wordmark-title">NEXO</text>
+    <text x="65" y="36" class="wordmark-subtitle">FASHIONS</text>
+</svg>

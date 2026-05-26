@@ -32,26 +32,40 @@
     align-items: center;
 }
 
-/* Logo styling - High-End Corporate Serif */
+/* Logo styling - High-End Corporate Vector SVG */
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
 }
 
-.logo-text {
-    font-family: var(--font-heading);
-    font-size: 1.65rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    color: var(--color-bg-white);
-    display: inline-block;
-    transition: var(--transition-fast);
+.logo-img {
+    height: 38px;
+    width: auto;
+    display: block;
+    transition: opacity var(--transition-fast);
 }
 
-.logo-dot {
-    color: var(--color-luxury-gold);
-    font-family: var(--font-body);
+/* Hide logo types based on scrolling and theme state */
+.site-header:not(.scrolled) .logo-dark {
+    display: none !important;
+}
+.site-header:not(.scrolled) .logo-light {
+    display: block !important;
+}
+
+.site-header.scrolled .logo-dark {
+    display: block !important;
+}
+.site-header.scrolled .logo-light {
+    display: none !important;
+}
+
+/* Subpages initialized in light-theme (not scrolled) */
+.site-header.light-theme:not(.scrolled) .logo-dark {
+    display: block !important;
+}
+.site-header.light-theme:not(.scrolled) .logo-light {
+    display: none !important;
 }
 
 /* For non-hero pages or light header mode fallback */
