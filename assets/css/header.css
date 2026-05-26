@@ -45,6 +45,12 @@
     transition: opacity var(--transition-fast);
 }
 
+@media (max-width: 480px) {
+    .logo-img {
+        height: 28px; /* Scale down slightly on narrow mobile viewports to prevent overflow */
+    }
+}
+
 /* By default, hide logo_dark, show logo_light (since header background is dark by default) */
 .logo-dark {
     display: none !important;
@@ -179,8 +185,11 @@
     height: 18px;
     background: transparent;
     border: none;
+    padding: 0;
+    margin: 0;
     cursor: pointer;
     z-index: 1100;
+    outline: none;
 }
 
 .mobile-trigger span {
