@@ -137,6 +137,19 @@
     font-weight: 600;
 }
 
+/* High contrast hover & active state overrides for transparent/scrolled dark headers */
+.site-header:not(.light-theme) .nav-link:hover,
+.site-header:not(.light-theme) .nav-item.active .nav-link,
+.site-header.scrolled .nav-link:hover,
+.site-header.scrolled .nav-item.active .nav-link {
+    color: #FFFFFF !important;
+}
+
+.site-header:not(.light-theme) .nav-link::after,
+.site-header.scrolled .nav-link::after {
+    background-color: #FFFFFF !important;
+}
+
 /* Header CTAs */
 .header-actions {
     display: none;
@@ -241,8 +254,9 @@
 
 .mobile-nav-link:hover,
 .mobile-nav-list .active .mobile-nav-link {
-    color: var(--color-luxury-gold);
+    color: #FFFFFF !important; /* Pure white high-contrast for visibility in dark drawer */
     padding-left: var(--space-xs);
+    border-bottom-color: #FFFFFF;
 }
 
 .mobile-drawer-cta {
