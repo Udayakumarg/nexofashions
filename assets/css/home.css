@@ -57,7 +57,7 @@
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.25em;
-    color: var(--color-luxury-gold);
+    color: #FFFFFF; /* High-contrast white for visibility on dark hero BG */
     text-transform: uppercase;
     margin-bottom: var(--space-md);
     display: inline-flex;
@@ -70,7 +70,7 @@
     display: inline-block;
     width: 16px;
     height: 1px;
-    background-color: var(--color-luxury-gold);
+    background-color: rgba(255, 255, 255, 0.4); /* Elegant translucent line */
 }
 
 .hero-title {
@@ -82,7 +82,7 @@
 
 .hero-title span {
     font-style: italic;
-    color: var(--color-luxury-gold);
+    color: #FFFFFF; /* High-contrast white for perfect readability */
 }
 
 .hero-subtitle {
