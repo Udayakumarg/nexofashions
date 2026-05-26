@@ -1,0 +1,423 @@
+/* ==========================================================================
+   NEXO FASHIONS - SUB-PAGE CUSTOM STYLES
+   ========================================================================== */
+
+/* --- 1. Global Page Header Banner (Editorial Style) --- */
+.page-banner {
+    position: relative;
+    background-color: var(--color-primary-dark);
+    padding: var(--space-xxl) 0 var(--space-xl) 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.page-banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.18;
+    z-index: 0;
+}
+
+.page-banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-banner-content h1 {
+    color: var(--color-bg-white);
+    margin-bottom: var(--space-sm);
+}
+
+.page-banner-content p {
+    color: var(--color-text-muted);
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+/* Breadcrumb nav */
+.breadcrumbs {
+    display: inline-flex;
+    gap: var(--space-xs);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-luxury-gold);
+    margin-bottom: var(--space-md);
+}
+
+.breadcrumbs a {
+    color: var(--color-text-muted);
+    transition: var(--transition-fast);
+}
+
+.breadcrumbs a:hover {
+    color: var(--color-luxury-gold);
+}
+
+
+/* --- 2. About Us Layouts --- */
+.about-story-grid {
+    display: grid;
+    gap: var(--space-xl);
+    align-items: center;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+    .about-story-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+    }
+}
+
+.about-story-images {
+    position: relative;
+    height: 480px;
+}
+
+.about-img-main {
+    width: 85%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-lg);
+}
+
+.about-img-secondary {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    width: 50%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-lg);
+    border: 4px solid var(--color-bg-light);
+}
+
+.about-vision-mission {
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    padding: var(--space-xl);
+    border-radius: var(--border-radius-sm);
+    margin-top: var(--space-xl);
+}
+
+
+/* --- 3. Services Layouts --- */
+.service-detail-row {
+    display: grid;
+    gap: var(--space-xl);
+    align-items: center;
+    grid-template-columns: 1fr;
+    margin-bottom: var(--space-xxl);
+}
+
+.service-detail-row:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+    .service-detail-row {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .service-detail-row:nth-child(even) .service-detail-content {
+        order: 2;
+    }
+    .service-detail-row:nth-child(even) .service-detail-image {
+        order: 1;
+    }
+}
+
+.service-detail-image {
+    height: 400px;
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.service-detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-detail-list {
+    list-style: none;
+    margin-top: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.service-detail-item {
+    display: flex;
+    gap: var(--space-xs);
+    font-size: 0.95rem;
+}
+
+.service-detail-item svg {
+    color: var(--color-premium-teal);
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+
+/* --- 4. Industries / Products Specifications --- */
+.product-showcase-grid {
+    display: grid;
+    gap: var(--space-xl);
+}
+
+.product-showcase-item {
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+}
+
+.product-showcase-img {
+    height: 320px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-showcase-body {
+    padding: var(--space-lg);
+}
+
+.product-spec-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-border);
+}
+
+.product-spec-item {
+    font-size: 0.85rem;
+}
+
+.product-spec-lbl {
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.product-spec-val {
+    color: var(--color-primary-dark);
+    font-weight: 600;
+}
+
+
+/* --- 5. Manufacturing Network Map --- */
+.capacity-card {
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.capacity-title {
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    color: var(--color-luxury-gold);
+}
+
+.capacity-val {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+}
+
+.capacity-desc {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+
+/* --- 6. Quality & Compliance Columns --- */
+.compliance-grid {
+    display: grid;
+    gap: var(--space-xl);
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .compliance-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .compliance-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.compliance-detail-box {
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius-sm);
+}
+
+.compliance-detail-box h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.compliance-detail-box ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: var(--space-sm);
+}
+
+.compliance-detail-box li {
+    display: flex;
+    gap: var(--space-xs);
+    font-size: 0.9rem;
+}
+
+.compliance-detail-box li svg {
+    color: var(--color-luxury-gold);
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+
+/* --- 7. Sourcing Process Timeline & Details --- */
+.process-detail-card {
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius-sm);
+    margin-bottom: var(--space-md);
+}
+
+.process-detail-card h3 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--space-xs);
+}
+
+
+/* --- 8. Case Studies Portal --- */
+.case-study-hero {
+    display: grid;
+    gap: var(--space-xl);
+    grid-template-columns: 1fr;
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    margin-bottom: var(--space-xxl);
+}
+
+@media (min-width: 1024px) {
+    .case-study-hero {
+        grid-template-columns: 1.2fr 0.8fr;
+    }
+}
+
+.case-study-hero-img {
+    height: 100%;
+    min-height: 350px;
+    object-fit: cover;
+}
+
+.case-study-hero-body {
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* --- 9. Contact / RFQ Console split --- */
+.contact-split {
+    display: grid;
+    gap: var(--space-xl);
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+    .contact-split {
+        grid-template-columns: 0.9fr 1.1fr;
+    }
+}
+
+.contact-info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.contact-card {
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    gap: var(--space-md);
+}
+
+.contact-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(212, 175, 55, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    color: var(--color-luxury-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-sm);
+    flex-shrink: 0;
+}
+
+.contact-details h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: var(--font-body);
+    margin-bottom: 2px;
+}
+
+.contact-details p {
+    font-size: 0.95rem;
+}
+
+/* Premium stylized map placeholder frame */
+.map-iframe-container {
+    height: 320px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.map-iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(0.8) contrast(1.1) invert(0.05); /* Modern editorial style map overlay */
+}

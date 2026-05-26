@@ -1,0 +1,262 @@
+/* ==========================================================================
+   NEXO FASHIONS - HOME PAGE SPECIFIC STYLES
+   ========================================================================== */
+
+/* --- 1. Premium Hero Section --- */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    background-color: var(--color-primary-dark);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background Image Overlay with Cinematic Dark Mask */
+.hero-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(17, 24, 39, 0.8) 50%, rgba(17, 24, 39, 0.95) 100%);
+}
+
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.45;
+    /* Soft zoom-in dynamic aesthetic */
+    animation: slowZoom 20s infinite alternate ease-in-out;
+}
+
+@keyframes slowZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.06); }
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero-tag {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    color: var(--color-luxury-gold);
+    text-transform: uppercase;
+    margin-bottom: var(--space-md);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-tag::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 1px;
+    background-color: var(--color-luxury-gold);
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    color: var(--color-bg-white);
+    margin-bottom: var(--space-md);
+    line-height: 1.15;
+}
+
+.hero-title span {
+    font-style: italic;
+    color: var(--color-luxury-gold);
+}
+
+.hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    color: var(--color-text-light);
+    opacity: 0.9;
+    margin-bottom: var(--space-lg);
+    line-height: 1.7;
+    max-width: 720px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+
+/* --- 2. Trust Metrics Bar --- */
+.metrics-section {
+    position: relative;
+    z-index: 5;
+    margin-top: -80px; /* Overlaps hero slightly */
+    padding-bottom: var(--space-lg);
+}
+
+
+/* --- 3. What We Do Overlay Adjustments --- */
+.what-we-do-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--space-xl) auto;
+}
+
+
+/* --- 4. Why Tiruppur Grid (Editorial Storytelling) --- */
+.why-tiruppur-grid {
+    display: grid;
+    gap: var(--space-xl);
+    align-items: center;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+    .why-tiruppur-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+    }
+}
+
+.why-tiruppur-photo-panel {
+    position: relative;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-lg);
+    height: 480px;
+}
+
+.why-tiruppur-photo-panel::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    bottom: -20px;
+    left: 20px;
+    border: 2px solid var(--color-luxury-gold);
+    z-index: -1;
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition-smooth);
+}
+
+.why-tiruppur-photo-panel:hover::after {
+    top: 10px;
+    right: -10px;
+    bottom: -10px;
+    left: 10px;
+}
+
+.why-tiruppur-points {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.why-tiruppur-point-item {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.why-tiruppur-point-icon {
+    color: var(--color-luxury-gold);
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.why-tiruppur-point-text h4 {
+    margin-bottom: 2px;
+}
+
+
+/* --- 5. Factory Showcase Preview --- */
+.factory-showcase-bg {
+    background-color: var(--color-primary-dark);
+}
+
+.factory-showcase-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.factory-showcase-stat-item {
+    border-left: 2px solid var(--color-luxury-gold);
+    padding-left: var(--space-sm);
+}
+
+.factory-showcase-stat-val {
+    font-family: var(--font-heading);
+    font-size: 1.65rem;
+    color: var(--color-bg-white);
+    font-weight: 700;
+}
+
+
+/* --- 6. Global Reach Layout --- */
+.global-reach-intro {
+    margin-bottom: var(--space-lg);
+}
+
+
+/* --- 7. Final Call to Action Segment --- */
+.final-cta-section {
+    position: relative;
+    background-color: var(--color-primary-dark);
+    padding: var(--space-xxl) 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.final-cta-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.15;
+}
+
+.final-cta-container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.final-cta-container h2 {
+    color: var(--color-bg-white);
+    margin-bottom: var(--space-md);
+}
+
+.final-cta-container p {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-lg);
+    line-height: 1.7;
+}
+
+.final-cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}

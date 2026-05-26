@@ -1,0 +1,325 @@
+/* ==========================================================================
+   NEXO FASHIONS - GLOBAL BASE STYLE & TYPOGRAPHY
+   ========================================================================== */
+
+/* --- Reset & Base Elements --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-light);
+    color: var(--color-text-primary);
+    line-height: 1.65;
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbar for Luxury Experience */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--color-primary-dark);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-luxury-gold);
+    border-radius: var(--border-radius-sm);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-luxury-gold-hover);
+}
+
+/* --- Typography Definitions --- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-primary-dark);
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: clamp(1.35rem, 2vw, 1.85rem);
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: var(--font-body);
+}
+
+p {
+    color: var(--color-text-secondary);
+    font-size: 1.05rem;
+    font-weight: 400;
+}
+
+strong {
+    color: var(--color-primary-dark);
+    font-weight: 600;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* --- Layout Architecture --- */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 var(--space-lg);
+    }
+}
+
+.section-padding {
+    padding: var(--space-xl) 0;
+}
+
+.section-padding-large {
+    padding: var(--space-xxl) 0;
+}
+
+/* Grid Layout Systems */
+.grid {
+    display: grid;
+    gap: var(--space-md);
+}
+
+.grid-2 { display: grid; gap: var(--space-lg); grid-template-columns: 1fr; }
+.grid-3 { display: grid; gap: var(--space-lg); grid-template-columns: 1fr; }
+.grid-4 { display: grid; gap: var(--space-md); grid-template-columns: 1fr; }
+
+@media (min-width: 768px) {
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(2, 1fr); }
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Flex Utilities */
+.flex {
+    display: flex;
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --- Brand Elements & CTAs --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2.25rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Primary Teal CTA */
+.btn-primary {
+    background-color: var(--color-premium-teal);
+    color: var(--color-bg-white);
+    border: 1px solid var(--color-premium-teal);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-premium-teal-hover);
+    border-color: var(--color-premium-teal-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(15, 118, 110, 0.15);
+}
+
+/* Luxury Gold CTA */
+.btn-gold {
+    background-color: var(--color-luxury-gold);
+    color: var(--color-primary-dark);
+    border: 1px solid var(--color-luxury-gold);
+}
+
+.btn-gold:hover {
+    background-color: var(--color-luxury-gold-hover);
+    border-color: var(--color-luxury-gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15);
+}
+
+/* Secondary Outline CTA (Gold) */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary-dark);
+    border: 1px solid var(--color-luxury-gold);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-luxury-gold);
+    color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1);
+}
+
+/* Dark version of secondary button (for light text sections) */
+.btn-outline-white {
+    background-color: transparent;
+    color: var(--color-bg-white);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline-white:hover {
+    background-color: var(--color-bg-white);
+    color: var(--color-primary-dark);
+    border-color: var(--color-bg-white);
+    transform: translateY(-2px);
+}
+
+/* Editorial Category Tag */
+.badge-gold {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-luxury-gold);
+    margin-bottom: var(--space-xs);
+    display: inline-block;
+}
+
+/* --- Section Title Header (Editorial Styling) --- */
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--space-xl) auto;
+}
+
+.section-header h2 {
+    margin-bottom: var(--space-xs);
+    position: relative;
+    display: inline-block;
+    padding-bottom: var(--space-xs);
+}
+
+/* Muted luxury divider rule */
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: var(--color-luxury-gold);
+}
+
+.section-header p {
+    margin-top: var(--space-sm);
+    font-size: 1.15rem;
+}
+
+/* Glassmorphism Panel base */
+.glass-panel {
+    background: var(--color-bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: var(--shadow-glass);
+}
+
+/* --- Entry Reveal Animations (Intersection Observer) --- */
+.reveal {
+    opacity: 0;
+    transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.reveal-fade {
+    transform: scale(0.98);
+}
+
+.reveal-slide-up {
+    transform: translateY(40px);
+}
+
+.reveal-slide-left {
+    transform: translateX(40px);
+}
+
+.reveal-slide-right {
+    transform: translateX(-40px);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* Utility alignments */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.w-full { width: 100%; }
+
+.m-auto { margin: 0 auto; }
+.mt-sm { margin-top: var(--space-sm); }
+.mt-md { margin-top: var(--space-md); }
+.mt-lg { margin-top: var(--space-lg); }
+
+.bg-dark {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-light);
+}
+.bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark h4 {
+    color: var(--color-bg-white);
+}
+.bg-dark p {
+    color: var(--color-text-muted);
+}

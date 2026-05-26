@@ -1,0 +1,74 @@
+/* ==========================================================================
+   NEXO FASHIONS DESIGN SYSTEM - VARIABLES
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+    /* --- Premium Color System --- */
+    --color-primary-dark: #111827;      /* Deep Rich Charcoal / Black */
+    --color-primary-dark-rgb: 17, 24, 39;
+    --color-luxury-gold: #D4AF37;       /* Antique Muted Gold Accent */
+    --color-luxury-gold-hover: #B8962D;
+    --color-luxury-gold-rgb: 212, 175, 55;
+    --color-premium-teal: #0F766E;      /* Rich Teal for Conversion CTAs */
+    --color-premium-teal-hover: #0D645D;
+    --color-premium-teal-rgb: 15, 118, 110;
+    
+    /* Backgrounds */
+    --color-bg-light: #F8FAFC;          /* Clean Editorial Background */
+    --color-bg-white: #FFFFFF;          /* Pure White Card Base */
+    --color-bg-footer: #0B0F19;         /* Darker contrast footer */
+    --color-bg-glass: rgba(255, 255, 255, 0.75);
+    
+    /* Text */
+    --color-text-primary: #1F2937;      /* Dominant text contrast */
+    --color-text-secondary: #6B7280;    /* Captions & editorial metadata */
+    --color-text-light: #F3F4F6;        /* Inverse text for dark panels */
+    --color-text-muted: #9CA3AF;
+    
+    /* Structural Elements */
+    --color-border: #E5E7EB;            /* Editorial grid separator */
+    --color-border-hover: #D1D5DB;
+    --color-border-dark: rgba(255, 255, 255, 0.1);
+    
+    /* --- Typography System --- */
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    
+    /* --- Spacing System (Luxury Space) --- */
+    --space-xs: 0.5rem;   /* 8px */
+    --space-sm: 1rem;     /* 16px */
+    --space-md: 1.5rem;   /* 24px */
+    --space-lg: 2.5rem;   /* 40px */
+    --space-xl: 5rem;     /* 80px */
+    --space-xxl: 8rem;    /* 128px */
+    
+    /* --- UI Properties --- */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+    --border-radius-full: 9999px;
+    
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+    --shadow-md: 0 10px 30px -10px rgba(0,0,0,0.04);
+    --shadow-lg: 0 20px 40px -15px rgba(0,0,0,0.06);
+    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.03);
+    
+    /* --- Motion & Transitions --- */
+    --transition-fast: 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --transition-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    
+    /* Maximum layout bounds */
+    --max-width: 1400px;
+}
+
+/* Accessibility - Reduced Motion Preferred */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --transition-fast: 0.05s linear;
+        --transition-smooth: 0.05s linear;
+        --transition-slow: 0.05s linear;
+    }
+}
